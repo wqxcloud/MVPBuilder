@@ -11,6 +11,6 @@ public class MainP implements IMain{
 
     @Override
     public void gotoLogin() {
-
+        view.gotoLoginExample();
     }
 }
