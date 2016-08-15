@@ -6,32 +6,27 @@ import android.view.View;
 import android.widget.Button;
 
 import com.yihukurama.www.mvpbuilder.R;
-import com.yihukurama.www.mvpbuilder.framework.p.MainP;
 import com.yihukurama.www.mvpbuilder.framework.v.activity.BaseActivity;
-import com.yihukurama.www.mvpbuilder.framework.v.activity.LoginActivity;
+import com.yihukurama.www.mvpbuilder.framework.v.activity.DBExampleActivity;
 import com.yihukurama.www.mvpbuilder.framework.v.interfaceView.IMainActivity;
 
-public class MainActivity extends BaseActivity implements IMainActivity{
+public class MainActivity extends BaseActivity implements IMainActivity,View.OnClickListener{
 
-    Button btnLogin;
-    MainP mainP;
+    Button btnDB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        initView();
+        initData();
     }
 
-    @Override
-    public void gotoLoginExample() {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
 
     @Override
     public void initView() {
-        btnLogin = (Button)findViewById(R.id.loginBtn);
+        btnDB = (Button)findViewById(R.id.dbBtn);
+        btnDB.setOnClickListener(this);
     }
 
     @Override
@@ -43,9 +38,12 @@ public class MainActivity extends BaseActivity implements IMainActivity{
     public void onClick(View v) {
         super.onClick(v);
         switch (v.getId()){
-            case R.id.loginBtn:
-                mainP.gotoLogin();
+            case R.id.dbBtn:
+                Intent intent = new Intent(this, DBExampleActivity.class);
+                startActivity(intent);
+                finish();
                 break;
+
             default:
                 break;
         }

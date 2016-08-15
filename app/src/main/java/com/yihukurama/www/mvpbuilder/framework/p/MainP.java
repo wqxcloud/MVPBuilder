@@ -9,8 +9,9 @@ import com.yihukurama.www.mvpbuilder.framework.v.interfaceView.IMainActivity;
 public class MainP implements IMain{
     IMainActivity view;
 
+
     @Override
     public void gotoLogin() {
-        view.gotoLoginExample();
+
     }
 }

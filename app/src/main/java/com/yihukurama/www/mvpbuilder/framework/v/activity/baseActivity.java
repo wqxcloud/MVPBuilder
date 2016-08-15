@@ -1,5 +1,6 @@
 package com.yihukurama.www.mvpbuilder.framework.v.activity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,8 +15,7 @@ public class BaseActivity extends AppCompatActivity implements IActivity,View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_base);
 
-        initView();
-        initData();
+
     }
 
     @Override
@@ -29,7 +29,13 @@ public class BaseActivity extends AppCompatActivity implements IActivity,View.On
     }
 
     @Override
+    public Context getContext() {
+        return this;
+    }
+
+    @Override
     public void onClick(View v) {
 
     }
+
 }

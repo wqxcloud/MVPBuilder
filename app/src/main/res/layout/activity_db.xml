@@ -7,26 +7,38 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".framework.v.MainActivity">
-
-
+    tools:context=".framework.v.activity.DBExampleActivity">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/dbresult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hello World!I am a sample framework for android mvp!" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="GreenDao例子"
-            android:id="@+id/dbBtn"
+            android:text="插入数据"
+            android:id="@+id/insertBtn"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="删除数据"
+            android:id="@+id/delBtn"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="更新数据"
+            android:id="@+id/updateBtn"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
 
     </LinearLayout>
-
 </RelativeLayout>
