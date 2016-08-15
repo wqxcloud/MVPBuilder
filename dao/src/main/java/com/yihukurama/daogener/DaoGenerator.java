@@ -1,6 +1,7 @@
 package com.yihukurama.daogener;
-import de.greenrobot.daogenerator.Entity;
-import de.greenrobot.daogenerator.Schema;
+
+import org.greenrobot.greendao.generator.Entity;
+import org.greenrobot.greendao.generator.Schema;
 
 public class DaoGenerator {
 
@@ -21,7 +22,7 @@ public class DaoGenerator {
             UserTable(schema);
             // 最后我们将使用 DAOGenerator 类的 generateAll() 方法自动生成代码，此处你需要根据自己的情况更改输出目录（既之前创建的 java-gen)。
             // 其实，输出目录的路径可以在 build.gradle 中设置，有兴趣的朋友可以自行搜索，这里就不再详解。
-            new de.greenrobot.daogenerator.DaoGenerator().generateAll(schema, "/Volumes/DATA01/邓帅/workspace/androidstudio/MVPBuilder/app/src/main/java/");
+            new org.greenrobot.greendao.generator.DaoGenerator().generateAll(schema, "/Volumes/DATA01/邓帅/workspace/androidstudio/MVPBuilder/app/src/main/java/");
         }
 
     private static void UserTable(Schema schema) {
